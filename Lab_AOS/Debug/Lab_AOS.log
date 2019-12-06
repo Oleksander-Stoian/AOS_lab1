@@ -1,0 +1,4 @@
+﻿  Main.cpp
+D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(78): error C2872: minus: неоднозначный символ
+  D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(25): note: может быть "void minus(void)"
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.20.27508\include\xstddef(58): note: или       "std::minus"

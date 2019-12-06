@@ -1,0 +1,70 @@
+﻿  Main.cpp
+D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(67): warning C4244: =: преобразование "long" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+  D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(145): note: выполняется компиляция ссылки на экземпляр шаблон функции "double Sum<float>(void)"
+D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(67): warning C4244: =: преобразование "long" в "T", возможна потеря данных
+          with
+          [
+              T=char
+          ]
+  D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(146): note: выполняется компиляция ссылки на экземпляр шаблон функции "double Sum<char>(void)"
+D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(68): warning C4244: =: преобразование "long" в "T", возможна потеря данных
+          with
+          [
+              T=char
+          ]
+D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(84): warning C4244: =: преобразование "long" в "T1", возможна потеря данных
+          with
+          [
+              T1=float
+          ]
+  D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(154): note: выполняется компиляция ссылки на экземпляр шаблон функции "double Minus<float>(void)"
+D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(84): warning C4244: =: преобразование "long" в "T1", возможна потеря данных
+          with
+          [
+              T1=char
+          ]
+  D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(155): note: выполняется компиляция ссылки на экземпляр шаблон функции "double Minus<char>(void)"
+D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(85): warning C4244: =: преобразование "long" в "T1", возможна потеря данных
+          with
+          [
+              T1=char
+          ]
+D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(100): warning C4244: =: преобразование "long" в "T2", возможна потеря данных
+          with
+          [
+              T2=float
+          ]
+  D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(162): note: выполняется компиляция ссылки на экземпляр шаблон функции "double Multiplication<float>(void)"
+D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(100): warning C4244: =: преобразование "long" в "T2", возможна потеря данных
+          with
+          [
+              T2=char
+          ]
+  D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(163): note: выполняется компиляция ссылки на экземпляр шаблон функции "double Multiplication<char>(void)"
+D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(101): warning C4244: =: преобразование "long" в "T2", возможна потеря данных
+          with
+          [
+              T2=char
+          ]
+D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(115): warning C4244: =: преобразование "long" в "T3", возможна потеря данных
+          with
+          [
+              T3=float
+          ]
+  D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(170): note: выполняется компиляция ссылки на экземпляр шаблон функции "double Division<float>(void)"
+D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(115): warning C4244: =: преобразование "long" в "T3", возможна потеря данных
+          with
+          [
+              T3=char
+          ]
+  D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(171): note: выполняется компиляция ссылки на экземпляр шаблон функции "double Division<char>(void)"
+D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\Main.cpp(116): warning C4244: =: преобразование "long" в "T3", возможна потеря данных
+          with
+          [
+              T3=char
+          ]
+  Lab_AOS.vcxproj -> D:\repos\Учеба (C++)\Лабараторні\Lab_AOS\x64\Debug\Lab_AOS.exe
