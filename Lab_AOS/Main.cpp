@@ -3,10 +3,10 @@
 
 
 using namespace std;
-long sum_iter=1999999;
-long minus_iter = 1999999;
-long multiplication_iter = 1999999;
-long division_iter = 1999999;
+long sum_iter=			   19999999;
+long minus_iter =		   19999999;
+long multiplication_iter = 19999999;
+long division_iter =       19999999;
 
 double sumint, sumdouble, sumlong, sumfload, sumchar;
 
@@ -18,7 +18,7 @@ double timeSum()
 	t = clock();
 	for (long i = 0; i < sum_iter; ++i) { x = x + a; }
 	t = clock() - t;
-	return (double(t)) / CLOCKS_PER_SEC;
+	return (float(t)) / CLOCKS_PER_SEC;
 }
 double timeMinus()
 {
@@ -27,7 +27,7 @@ double timeMinus()
 	t = clock();
 	for (long i = 0; i < sum_iter; ++i) { x = x - a; }
 	t = clock() - t;
-	return (double(t)) / CLOCKS_PER_SEC;
+	return (float(t)) / CLOCKS_PER_SEC;
 }
 double timeDivision()
 {
@@ -36,7 +36,7 @@ double timeDivision()
 	t = clock();
 	for (long i = 1; i < sum_iter; ++i) { x = x / a; }
 	t = clock() - t;
-	return (double(t)) / CLOCKS_PER_SEC;
+	return (float(t)) / CLOCKS_PER_SEC;
 }
 double timeMultiplication()
 {
@@ -45,7 +45,7 @@ double timeMultiplication()
 	t = clock();
 	for (long i = 0; i < sum_iter; ++i) { x = x * a; }
 	t = clock() - t;
-	return (double(t)) / CLOCKS_PER_SEC;
+	return (float(t)) / CLOCKS_PER_SEC;
 }
 
 
@@ -57,7 +57,7 @@ double timesum()
 	t = clock();
 	for (long i = 1; i < sum_iter; ++i) { x = x + a; }
 	t = clock() - t;
-	return (double(t)) / CLOCKS_PER_SEC;
+	return (float(t)) / CLOCKS_PER_SEC;
 }
 
 template<typename T>
@@ -73,7 +73,7 @@ double Sum() {
 		
 	}
 	t = clock() - t;
-	return  (double(t)) / CLOCKS_PER_SEC;
+	return  (float(t)) / CLOCKS_PER_SEC;
 }
 
 template<typename T1>
@@ -89,7 +89,7 @@ double Minus()
 		c = a - b;
 	}
 	t = clock() - t;
-	return (double(t)) / CLOCKS_PER_SEC;
+	return (float(t)) / CLOCKS_PER_SEC;
 }
 
 template<typename T2>
@@ -105,7 +105,7 @@ double Multiplication()
 		c = a * b;
 	}
 	t = clock() - t;
-	return  (double(t)) / CLOCKS_PER_SEC;
+	return  (float(t)) / CLOCKS_PER_SEC;
 }
 template<typename T3>
 double Division()
@@ -117,107 +117,138 @@ double Division()
 	{
 		a = 280 / i;
 		b = a / i;
-		c = a / (b+1);
+		c = a / (b + 1);
 	}
 	t = clock() - t;
-	return  (double(t)) / CLOCKS_PER_SEC;
+	return  (float(t)) / CLOCKS_PER_SEC;
+
+}
+double diagram(double arr[])
+{
+	int arr_procent[4] = {};
+	double time_max = arr[0];
+	int i = 0;
+	for (int i = 0; i < 4; ++i) 
+	{
+		if (arr[i] > time_max)
+		{
+			time_max = arr[i];
+		}
+	}
+	return time_max;
 }
 
-void print_int(double time)
-{	
-	int x;
-	int arr[4] = {};
-	arr[0] = sum_iter / sumint;
-	arr[1] = sum_iter / sumdouble;
-	arr[2] = sum_iter / sumlong;
-	arr[3] = sum_iter / sumfload;
-	arr[4] = sum_iter / sumchar;
-	
+void print_x(int procent)
+{
+		int index = 0, num2 = 0,index2=0;
+		int num = procent / 10;
+		while (index < num)
+		{
+			cout << "X";
+			++index;
+		}
+		
+		if (num < 10)
+		{
+			num2 = 10 - num;
+			while (index2 < num2)
+			{
+				cout << " ";
+				++index2;
+			}
+		}
+}
+
+void print(double time_sum, double time_minus, double time_multiplication, double time_division,string tipe)
+{
+	double arr_time[4] = { time_sum,time_minus,time_multiplication,time_division };
+	int arr_procent[4] = {};
+	double time_max = diagram(arr_time);
+	for ( int i = 0; i < 4; ++i){arr_procent[i] = (arr_time[i] / time_max) * 100; }
+
+	char arr_sign[4] = { '+','-','*','/' };
 	for (int i = 0; i < 4; ++i)
 	{
-		if (arr[i] <= arr[i + 1])
-		{
-
-			x = arr[i + 1];
-		}
-		else
-		{
-			x = arr[i];
-		}
-
+		cout << arr_sign[i] << "\t" << tipe << "\t" << arr_time[i]<<"\t"; print_x(arr_procent[i]);  cout <<"\t"<< arr_procent[i] << "\t|" << endl;
 	}
-
-
-
-
-
-
+	cout << "================================================|" << endl;
 }
 
+int main() 
+{
+	cout << "================================================|" << endl;
 
-int main() {
-	
-	
 	int num = 0;
-	double time_sum = 0., time_minus = 0.,time_division = 0., time_multiplication = 0.;
-	double time_int = 0., time_double = 0., time_long = 0., time_float = 0., time_char = 0.;
+	float time_sum = 0., time_minus = 0.,time_division = 0., time_multiplication = 0.;
+	float time_res1 = 0., time_res2 = 0., time_res3 = 0., time_res4 = 0.;
+	
+	time_sum = timeSum();
+	time_minus = timeMinus();
+	time_multiplication = timeMultiplication();
+	time_division = timeDivision();
 	
 	
-	while (num<=4)
+	while (num <= 5)
 	{
-
-
 		switch (num)
 		{
-		case 1:         
-			time_sum = timeSum();
-			sumint = Sum<int>();
-			sumdouble = Sum<double>();
-			sumlong = Sum<long>();
-			sumfload = Sum<float>();
-			sumchar = Sum<char>();
-
-			
-			time_int = sumint - time_sum;
-			time_double = sumdouble - time_sum;
-			time_long = sumlong - time_sum;
-			time_float = sumfload - time_sum;
-			time_char =sumchar - time_sum;
-
+		case 1:
+			time_res1 = Sum<int>() - time_sum;
+			time_res2 = Minus<int>() - time_minus;
+			time_res3 = Multiplication<int>() - time_multiplication;
+			time_res4 = Division<int>() - time_division;
+			print(time_res1, time_res2, time_res3, time_res4, "int");
 			break;
-		case 2: 
-			time_minus = timeMinus();
-			time_int = Minus<int>() - time_minus;
-			time_double = Minus<double>() - time_minus;
-			time_long = Minus<long>() - time_minus;
-			time_float = Minus<float>() - time_minus;
-			time_char=Minus<char>() - time_minus;
+		case 2:
+			time_res1 = Sum<double>() - time_sum;
+			time_res2 = Minus<double>() - time_minus;
+			time_res3 = Multiplication<double>() - time_multiplication;
+			time_res4 = Division<double>() - time_division;
+			print(time_res1, time_res2, time_res3, time_res4, "double");
+			
 			break;
 		case 3:
-			time_multiplication = timeMultiplication();
-			time_int = Multiplication<int>() - time_multiplication;
-			time_double = Multiplication<double>() - time_multiplication;
-			time_long = Multiplication<long>() - time_multiplication;
-			time_float = Multiplication<float>() - time_multiplication;
-			time_char = Multiplication<char>() - time_multiplication;
+			time_res1= Sum<long>() - time_sum;
+			time_res2 = Minus<long>() - time_minus;
+			time_res3 = Multiplication<long>() - time_multiplication;
+			time_res4 = Division<long>() - time_division;
+			print(time_res1, time_res2, time_res3, time_res4, "long");
 			break;
 		case 4:
-			time_division = timeDivision();
-			time_int = Division<int>() - time_division;
-			time_double = Division<double>() - time_division;
-			time_long = Division<long>() - time_division;
-			time_float = Division<float>() - time_division;
-			time_char = Division<char>() - time_division;
+			time_res1 = Sum<float>() - time_sum;
+			time_res2 = Minus<float>() - time_minus;
+			time_res3 = Multiplication<float>() - time_multiplication;
+			time_res4 = Division<float>() - time_division;
+			print(time_res1, time_res2, time_res3, time_res4, "float");
 			break;
-		
+		case 5:
+			time_res1 = Sum<char>() - time_sum;
+			time_res2 = Minus<char>() - time_minus;
+			time_res3= Multiplication<char>() - time_multiplication;
+			time_res4 = Division<char>() - time_division;
+			print(time_res1, time_res2, time_res3, time_res4, "char");
+			break;
 		}
 		++num;
 	}
-
-
-
+	
 	
 
 	system("pause");
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
